@@ -3,22 +3,3 @@ services:
   netbox:
     ports:
     - 7070:7000
-    volumes:
-    - /opt/netbox:/etc/netbox/config:z,ro
-    - netbox-media-files:/opt/netbox/netbox/media
-    - netbox-reports-files:/opt/netbox/netbox/reports
-    - netbox-scripts-files:/opt/netbox/netbox/scripts
-    healthcheck:
-      retries: 15
-  netbox-worker:
-    volumes:
-    - /opt/netbox:/etc/netbox/config:z,ro
-    - netbox-media-files:/opt/netbox/netbox/media
-    - netbox-reports-files:/opt/netbox/netbox/reports
-    - netbox-scripts-files:/opt/netbox/netbox/scripts
-  netbox-housekeeping:
-    volumes:
-    - /opt/netbox:/etc/netbox/config:z,ro
-    - netbox-media-files:/opt/netbox/netbox/media
-    - netbox-reports-files:/opt/netbox/netbox/reports
-    - netbox-scripts-files:/opt/netbox/netbox/scripts
