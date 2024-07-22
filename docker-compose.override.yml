@@ -2,4 +2,4 @@ version: '3.4'
 services:
   netbox:
     ports:
-    - 7070:7000
+    - 7000:7070
